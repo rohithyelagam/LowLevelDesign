@@ -7,6 +7,7 @@ import java.sql.*;
 public class Demo {
 
     public static void main(String[] args) {
+
         try{
 
             String url = "jdbc:oracle:thin:@10.169.88.28:1535/HCMPDEV";
@@ -33,6 +34,9 @@ public class Demo {
             while (resultSet.next()){
                 System.out.println("Reson : "+resultSet.getString("REASON"));
             }
+
+
+            Thread t1 = new Thread("hello");
 
             // transactions handling if needed
 
